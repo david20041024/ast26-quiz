@@ -1,7 +1,7 @@
 author: david20041024
 date: 2026-03-06
 question: |
-  在購買SSD時，會發現QLC NAND Flash 相較於SLC NAND Flash而言更加便宜，但是QLC理論上生產的良率應該比較低（因為對於閾值的判斷較嚴格），其中使QLC比較便宜的原因為?
+  在購買SSD時，會發現QLC NAND Flash 相較於SLC NAND Flash而言更加便宜，其中使QLC NAND Flash比較便宜的原因為?
 options:
   - text: "容量成本被平攤掉了"
     correct: true
