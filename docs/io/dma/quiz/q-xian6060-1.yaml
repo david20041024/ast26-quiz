@@ -1,0 +1,20 @@
+author: xian6060
+date: 2026-03-15
+question: |
+  假設你正在開發一個加密通訊程式，所有儲存在硬碟中的資料在發送到網路之前，都必須先經過 AES 加密處理。
+  請問在這種情況下，開發者還能使用 sendfile() 等 Zero-copy 相關技術嗎？
+options:
+  - text: "可以，使用 Zero-copy 可以減少資料搬運量，提高效率。"
+    explanation: |
+      Zero-copy 不須 CPU 介入，更適合靜態資料的搬移，而 AES 加密需 CPU 進行處理。
+  - text: "不可以，AES 運算是 CPU 密集型任務，不能使用 Zero-copy。"
+    correct: true
+    explanation: |
+      資料必須經過 CPU 暫存器，才能進行 AES 運算。
+      Zero-copy 的核心在於「不經過 CPU 搬運」，如果資料需要經過 CPU 進行運算（如加密），資料就不能 bypass CPU。
+  - text: "可以，Zero-copy 的使用，釋放出 CPU 去做加密操作。"
+    explanation: |
+      CPU 完全沒碰到資料，無法進行加密處理。
+  - text: "不可以，"
+    explanation: |
+      Explain the error in reasoning.
