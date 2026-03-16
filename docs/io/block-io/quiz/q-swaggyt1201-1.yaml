@@ -22,5 +22,5 @@ options:
     correct: true
     explanation: |
       當請求大小變為 128KB 時，達到 500K IOPS 需要 500K x 128KB = 64GB/s。
-      然而硬體上限僅 4GB/s，因此實際 IOPS 會被限制在 4000MB/128KB 約等於31250。
+      然而硬體上限僅 4GB/s，因此實際 IOPS 會被限制在 4000MB/128KB \approx 31250。
       這說明瓶頸已從 IOPS 轉向了 Bandwidth。
