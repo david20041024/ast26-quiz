@@ -3,10 +3,11 @@ date: 2026-03-18
 question: |
   FTL 涉及成本與效率考量，請問下列有關 FTL 的描述，哪一項是正確的？
 options:
-  - text: "傳統單一的 MOSFET 比單一的 Flash Cell 的製造成本更高，所以 SRAM 比 NAND Flash 更貴"
+  - text: "由於單一 SRAM MOSFET 單元的製造成本遠低於 Flash Cell，因此全面採用 Page-level mapping 是目前 SSD 的主流配置"
     explanation: |
-      Flash Cell的內部結構比MOSFET更複雜，包含了額外的浮動閘極等，但是SRAM每個位元需要6個MOSFET，而Flash每個位元只需要1個或以下的Flash Cell，因此SRAM更昂貴。
-  - text: "DFTL 的演算法中，在滿的時候通常會利用 LRU 來淘汰 CMT 裡的資料，是基於 Spatial Locality"
+      雖然單一 MOSFET 的結構比包含浮動閘極的 Flash Cell 簡單，但 SRAM 需要6個 MOSFET，所以 SRAM 昂貴很多。
+      若要全面採用 Page-level mapping 會用到大量的 SRAM，成本會難以承受。
+      所以目前多採用 DFTL 與混合式 mapping。
     explanation: |
       LRU 是基於 Temporal locality，認為最近被訪問的資料在未來也很可能會被訪問，而不是 Spatial Locality。
   - text: "Log block 能徹底消除 Block-level mapping 在小資料更新中，所需要的 Read-Modify-Write"
